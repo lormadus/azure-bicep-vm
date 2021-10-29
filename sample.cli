@@ -1,0 +1,6 @@
+az group create --name prod --location koreacentral
+az deployment sub create --template-file ./main.bicep --parameters ./parameters/parameters.prod.json  --location KoreaCentral
+
+
+Remove Resources
+az deployment group create -g prod -f ./main.bicep --mode Complete
